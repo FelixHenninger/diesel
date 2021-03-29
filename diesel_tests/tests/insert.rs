@@ -62,7 +62,7 @@ fn insert_records_as_vec() {
 }
 
 #[test]
-#[cfg(not(any(feature = "sqlite", feature = "mysql")))]
+#[cfg(not(feature = "mysql"))]
 fn insert_records_using_returning_clause() {
     use crate::schema::users::table as users;
     let connection = connection();
@@ -92,7 +92,7 @@ fn insert_records_using_returning_clause() {
 }
 
 #[test]
-#[cfg(not(any(feature = "sqlite", feature = "mysql")))]
+#[cfg(not(feature = "mysql"))]
 fn insert_records_with_custom_returning_clause() {
     use crate::schema::users::dsl::*;
 
