@@ -58,9 +58,9 @@ jobs:
       - name: Install sqlite (Linux)
         if: runner.os == 'Linux' && matrix.backend == 'sqlite'
         run: |
-          curl -fsS --retry 3 -o sqlite-autoconf-3310100.tar.gz https://sqlite.org/2020/sqlite-autoconf-3310100.tar.gz
-          tar zxf sqlite-autoconf-3310100.tar.gz
-          cd sqlite-autoconf-3310100
+          curl -fsS --retry 3 -o sqlite-autoconf-3350300.tar.gz https://sqlite.org/2021/sqlite-autoconf-3350300.tar.gz
+          tar zxf sqlite-autoconf-3350300.tar.gz
+          cd sqlite-autoconf-3350300
           CFLAGS="$CFLAGS -O2 -fno-strict-aliasing \
               -DSQLITE_DEFAULT_FOREIGN_KEYS=1 \
               -DSQLITE_SECURE_DELETE \
